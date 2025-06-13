@@ -25,7 +25,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\.(BUF|BYT|END|EQU|TXT)</string>
+			<string>\.(BUF|BYT|END|EQU|FI|IF|ORG|SCR|TXT)</string>
 			<key>name</key>
 			<string>support.type.psm</string>
 		</dict>
@@ -79,7 +79,7 @@
 		</dict>
 		<dict>
 			<key>match</key>			
-			<string>\b(ADD|ADDC|AND|C|CALL|COMP|CMPC|EXX|HALT|IN|JUMP|LD|MOVE|NC|NOP|NZ|OR|OUT|RET|RETI|RL|RR|SUBC|SL0|SL1|SLA|SLL|SR0|SR1|SRA|SRL|SUB|SUBC|ST|TEST|TSTC|XOR|Z)\b</string>
+			<string>\b(Z|NZ|C|NC|NAMEREG|CONSTANT|LOAD|STAR|DISABLE|ENABLE|RETURNI|SL0|SL1|SLX|SLA|RL|SR0|SR1|SRX|SRA|RR|INPUT|OUTPUT|OUTPUTK|ADD|ADDCY|SUB|SUBCY|AND|OR|XOR|TEST|TESTCY|COMPARE|COMPARECY|REGBANK|JUMP|and|STORE|FETCH|CALL|RETURN|HWBUILD)\b</string>
 			<key>name</key>
 			<string>keyword.mnemonic.psm</string>
 		</dict>
@@ -94,6 +94,12 @@
 			<string>\b0x[0-9a-fA-F]+\b</string>
 			<key>name</key>
 			<string>constant.numeric.hex</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b0b[0-1]+\b</string>
+			<key>name</key>
+			<string>constant.numeric.bin</string>
 		</dict>
 		<dict>
 			<key>match</key>
